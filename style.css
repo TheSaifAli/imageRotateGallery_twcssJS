@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    background: #000;
+    height: 100vh;
+} */
+.imgContainer{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .7s ease-in-out;
+}   
+
+.imgContainer span{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    transform:rotateY(calc(var(--i)*45deg)) translateZ(400px);
+}
+.imgContainer span img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+
+}
